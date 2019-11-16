@@ -1,0 +1,58 @@
+{
+  "name": "vhuerta-graphql-scaffold",
+  "version": "0.0.0",
+  "description": "Wireless bear body",
+  "homepage": "https://github.com/vhuerta/graphql-scaffold",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vhuerta/graphql-scaffold.git"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "private": true,
+  "main": "src/index.js",
+  "dependencies": {
+    "apollo-server-express": "^2.9.9",
+    "await-to-js": "^2.1.1",
+    "bcrypt": "^3.0.6",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "graphql-import-node": "0.0.4",
+    "graphql-tools": "^4.0.6",
+    "jschemator": "^2.0.0",
+    "lodash": "^4.17.15",
+    "lodash.flow": "^3.5.0",
+    "lodash.partial": "^4.2.1",
+    "mongoose": "^5.7.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "redis": "^2.8.0",
+    "tracer": "^0.9.9"
+  },
+  "devDependencies": {
+    "codecov": "^3.6.1",
+    "eslint": "^5.16.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1",
+    "should": "^13.2.3",
+    "sinon": "^7.5.0"
+  },
+  "scripts": {
+    "start": "NODE_PATH=./src node src/index.js",
+    "start:dev": "LOG_LEVEL=trace NODE_PATH=./src npx nodemon src/index.js",
+    "start:debug": "NODE_PATH=./src npx ndb nodemon src/index.js",
+    "test": "NODE_PATH=./src  NODE_ENV=test nodemon --watch . --exec 'nyc --reporter=html --reporter=text --reporter=lcov mocha'",
+    "coverage": "NODE_PATH=./src  NODE_ENV=test nyc --reporter=text-lcov > coverage.lcov mocha && codecov -t $CODECOV_TOKEN"
+  },
+  "keywords": [],
+  "author": "Victor Huerta <vhuertahnz@gmail.com> https://github.com/vhuerta",
+  "license": "ISC"
+}
