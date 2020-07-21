@@ -37,7 +37,7 @@
     "tracer": "^0.9.9"
   },
   "devDependencies": {
-    "codecov": "^3.6.1",
+    "codecov": "^3.7.1",
     "eslint": "^5.16.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.19.4",
